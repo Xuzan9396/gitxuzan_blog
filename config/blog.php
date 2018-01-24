@@ -13,7 +13,7 @@ return [
 
 // Meta
     'meta' => [
-        'keywords' => 'gitxuzan Blog,blog,pigjian,laravel,vuejs,PJ Blog',
+        'keywords' => 'gitxuzan Blog,blog,php,laravel,vuejs',
         'description' => 'Nothing is impossible in gitxuzan Blog'
     ],
 

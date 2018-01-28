@@ -7,6 +7,20 @@ use App\Tools\Markdowner;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
+/**
+ * App\Discussion
+ *
+ * @property-read \Illuminate\Database\Eloquent\Collection|\App\Comment[] $comments
+ * @property-write mixed $content
+ * @property-read \Illuminate\Database\Eloquent\Collection|\App\Tag[] $tags
+ * @property-read \App\User $user
+ * @method static bool|null forceDelete()
+ * @method static \Illuminate\Database\Query\Builder|\App\Discussion onlyTrashed()
+ * @method static bool|null restore()
+ * @method static \Illuminate\Database\Query\Builder|\App\Discussion withTrashed()
+ * @method static \Illuminate\Database\Query\Builder|\App\Discussion withoutTrashed()
+ * @mixin \Eloquent
+ */
 class Discussion extends Model
 {
     use SoftDeletes;

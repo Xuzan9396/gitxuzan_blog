@@ -15,6 +15,8 @@ class Kernel extends ConsoleKernel
     protected $commands = [
         Commands\BlogInstall::class,
         Commands\CreateAdmin::class,
+        Commands\IdeHelper::class,
+        Commands\Iseed::class
     ];
 
     /**
@@ -27,6 +29,7 @@ class Kernel extends ConsoleKernel
     {
         // $schedule->command('inspire')
         //          ->hourly();
+        \Log::info(str_random() . "\r\n");
     }
 
     /**

@@ -6,9 +6,11 @@
     "type": "project",
     "require": {
         "php": ">=7.0.0",
-        "fideloper/proxy": "~3.3",
+        "barryvdh/laravel-ide-helper": "^2.4",
         "dflydev/apache-mime-types": "^1.0",
+        "doctrine/dbal": "^2.6",
         "erusev/parsedown": "^1.6",
+        "fideloper/proxy": "~3.3",
         "intervention/image": "^2.3",
         "jcc/laravel-vote": "dev-master",
         "jellybool/flysystem-upyun": "dev-master",
@@ -19,6 +21,7 @@
         "laravel/tinker": "~1.0",
         "league/fractal": "^0.14.0",
         "league/html-to-markdown": "^4.2",
+        "orangehill/iseed": "^2.5",
         "predis/predis": "^1.1",
         "yzalis/identicon": "^1.1"
     },
@@ -60,6 +63,12 @@
         "post-autoload-dump": [
             "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
             "@php artisan package:discover"
+        ],
+        "post-update-cmd": [
+            "Illuminate\\Foundation\\ComposerScripts::postUpdate",
+            "php artisan ide-helper:generate",
+            "php artisan ide-helper:meta",
+            "php artisan optimize"
         ]
     },
     "config": {

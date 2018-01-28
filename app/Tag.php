@@ -5,6 +5,16 @@ namespace App;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
+/**
+ * App\Tag
+ *
+ * @method static bool|null forceDelete()
+ * @method static \Illuminate\Database\Query\Builder|\App\Tag onlyTrashed()
+ * @method static bool|null restore()
+ * @method static \Illuminate\Database\Query\Builder|\App\Tag withTrashed()
+ * @method static \Illuminate\Database\Query\Builder|\App\Tag withoutTrashed()
+ * @mixin \Eloquent
+ */
 class Tag extends Model
 {
     use SoftDeletes;

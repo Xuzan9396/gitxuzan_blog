@@ -37,6 +37,7 @@ class ArticleController extends Controller
     {
         $article = $this->article->getBySlug($slug);
 
+
 //        $article->content = collect(json_decode($article->content))->get('html');
 
         return view('article.show', compact('article'));
